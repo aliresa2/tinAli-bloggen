@@ -6,11 +6,15 @@ INDEX_TEMPLATE = "templates/index_template.html"
 OUTPUT_INDEX = "index.html"
 
 def extract_title_and_date(filename):
-    # نمونه: 20250408-how-ai-can-change-content.html
+    # Example filename: 2025-04-08-how-ai-changes-content.html
     name = os.path.splitext(filename)[0]
     try:
-        date_str, slug = name.split("-", 1)
-        date = datetime.strptime(date_str, "%Y%m%d").strftime("%B %d, %Y")
+        parts = name.split("-", 3)
+        if len(parts) < 4:
+            return None, None, None
+        date_str = "-".join(parts[:3])  # 2025-04-08
+        slug = parts[3]
+        date = datetime.strptime(date_str, "%Y-%m-%d").strftime("%B %d, %Y")
         title = slug.replace("-", " ").capitalize()
         return title, date, filename
     except ValueError:

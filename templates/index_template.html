@@ -5,33 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TinAli AI Blog</title>
   <style>
-    :root {
-      --bg: #f9f9fb;
-      --card-bg: #fff;
-      --primary: #00c2c2;
-      --text: #333;
-      --muted: #888;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
       display: flex;
       justify-content: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
 
     .container {
-      max-width: 700px;
+      max-width: 900px;
       width: 100%;
     }
 
     h1 {
       text-align: center;
-      color: var(--primary);
-      margin-bottom: 2rem;
+      color: #00f7ff;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
     }
 
     ul {
@@ -40,46 +33,51 @@
     }
 
     li {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 1.2rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      background-color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 247, 255, 0.1);
       transition: transform 0.2s ease;
     }
 
     li:hover {
-      transform: scale(1.02);
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0, 247, 255, 0.2);
     }
 
     a {
-      color: var(--primary);
       text-decoration: none;
-      font-size: 1.2rem;
+      color: #00f7ff;
+      font-size: 1.3rem;
       font-weight: bold;
     }
 
     .date {
       display: block;
-      margin-top: 0.3rem;
-      color: var(--muted);
       font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 0.5rem;
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 1rem;
+      h1 {
+        font-size: 2rem;
       }
 
-      .container {
-        max-width: 100%;
+      a {
+        font-size: 1.1rem;
+      }
+
+      li {
+        padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>📝 TinAli AI Blog</h1>
+    <h1>📘 TinAli AI Blog</h1>
     <ul>
       {{ posts }}
     </ul>

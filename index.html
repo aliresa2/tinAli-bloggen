@@ -2,48 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TinAli AI Blog</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 2rem;
-      color: #333;
+    :root {
+      --bg: #f9f9fb;
+      --card-bg: #fff;
+      --primary: #00c2c2;
+      --text: #333;
+      --muted: #888;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
     h1 {
       text-align: center;
-      color: #222;
+      color: var(--primary);
+      margin-bottom: 2rem;
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     li {
-      background: #fff;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease;
     }
+
+    li:hover {
+      transform: scale(1.02);
+    }
+
     a {
+      color: var(--primary);
       text-decoration: none;
-      color: #007acc;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: bold;
     }
+
     .date {
       display: block;
-      font-size: 0.85rem;
-      color: #888;
       margin-top: 0.3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📝 TinAli AI Blog</h1>
-  <ul>
-    <li>
+  <div class="container">
+    <h1>📝 TinAli AI Blog</h1>
+    <ul>
+      <li>
 <a href="blog_posts/2025-04-08-چگونه-هوش-مصنوعی-می‌تواند-تولید-محتوا-را-متحول-کند؟.html">چگونه هوش مصنوعی می‌تواند تولید محتوا را متحول کند؟</a>
 <span class="date">April 08, 2025</span>
 </li>
@@ -51,6 +89,7 @@
 <a href="blog_posts/2025-04-08-creating-high-quality-content-with-ai-assistance.html">Creating high quality content with ai assistance</a>
 <span class="date">April 08, 2025</span>
 </li>
-  </ul>
+    </ul>
+  </div>
 </body>
 </html>
